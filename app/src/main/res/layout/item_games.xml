@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    android:id="@+id/GameCardView"
+    app:cardBackgroundColor="@color/contrast"
+    app:cardCornerRadius="20dp"
+    app:contentPadding="4dp"
+    android:maxHeight="50dp"
+    android:minHeight="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:weightSum="1"
+            android:orientation="horizontal">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/game_image"
+                android:layout_width="200px"
+                android:layout_height="200px"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center"
+                app:shapeAppearanceOverlay="@style/light_rounded"
+            />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/game_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Title"
+                    android:textColor="@color/white"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/game_best_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="5.99"
+                    android:textColor="@color/subText"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+
+            <CheckBox
+                app:useMaterialThemeColors="false"
+                android:id="@+id/listLikeBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleX="2"
+                android:scaleY="2"
+                android:layout_gravity="center"
+                android:button="@drawable/selector_favourite_item" />
+
+
+        </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

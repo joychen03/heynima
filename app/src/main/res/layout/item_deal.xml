@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    android:id="@+id/DealCardView"
+    app:cardBackgroundColor="@color/contrast"
+    app:cardCornerRadius="20dp"
+    app:contentPadding="4dp"
+    android:maxHeight="50dp"
+    android:minHeight="20dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/details_container"
+        android:padding="10dp"
+        android:weightSum="1"
+        android:orientation="horizontal">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/store_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/light_rounded"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/store_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Steam"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:id="@+id/save_percent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    tools:text="-99%"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:background="@drawable/rounded_corner_textview"
+                    android:paddingHorizontal="8dp"
+
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/retail_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:foreground="@drawable/strikethrough"
+                    android:fontFamily="@font/montserrat_medium"
+                    tools:text="3.99$"
+                    android:textColor="@color/subText"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/deal_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium"
+                    tools:text="3.99$"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="25dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            app:srcCompat="@drawable/ic_baseline_shopping_cart_24" />
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
